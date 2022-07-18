@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textWidth">163dp</dimen>
+    <dimen name="textHeight">20dp</dimen>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginUnsplashFragment">
+
+    <fragment
+        android:id="@+id/authUnsplashFragment"
+        android:name="com.example.unsplashapp.ui.authscreen.AuthUnsplashFragment"
+        android:label="AuthUnsplashFragment"
+        tools:layout="@layout/webview_login">
+        <action
+            android:id="@+id/action_authUnsplashFragment_to_topicsFragment"
+            app:destination="@id/topicsFragment"
+            app:popUpTo="@id/loginUnsplashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.example.unsplashapp.ui.cardscreen.CardFragment"
+        android:label="CardFragment"
+        tools:layout="@layout/fragment_card">
+        <argument
+            android:name="photo"
+            app:argType="com.example.unsplashapp.data.models.Photo"/>
+    </fragment>
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.example.unsplashapp.ui.photolistscreen.PhotoFragment"
+        android:label="PhotoFragment"
+        tools:layout="@layout/fragment_photolist">
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="null"/>
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="null"/>
+        <argument
+            android:name="count"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <action
+            android:id="@+id/action_photoFragment_to_cardFragment"
+            app:destination="@id/cardFragment">
+            <argument
+                android:name="photo"
+                app:argType="com.example.unsplashapp.data.models.Photo"/>
+        </action>
+        <action
+            android:id="@+id/action_photoFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginUnsplashFragment"
+        android:name="com.example.unsplashapp.ui.loginscreen.LoginUnsplashFragment"
+        android:label="LoginUnsplashFragment"
+        tools:layout="@layout/fragment_login_unsplash">
+        <action
+            android:id="@+id/action_login_screen_to_auth_screen"
+            app:destination="@id/authUnsplashFragment" />
+        <action
+            android:id="@+id/action_loginUnsplashFragment_to_topicsFragment"
+            app:destination="@id/topicsFragment"
+            app:popUpTo="@id/nav_graph"/>
+    </fragment>
+    <fragment
+        android:id="@+id/topicsFragment"
+        android:name="com.example.unsplashapp.ui.topicsscreen.TopicsFragment"
+        android:label="TopicsFragment" >
+        <action
+            android:id="@+id/action_topicsFragment_to_photoFragment"
+            app:destination="@id/photoFragment">
+            <argument
+                android:name="id"
+                app:argType="string"
+                android:defaultValue="null"/>
+            <argument
+                android:name="title"
+                app:argType="string"
+                android:defaultValue="null"/>
+            <argument
+                android:name="count"
+                app:argType="integer"
+                android:defaultValue="0"/>
+        </action>
+        <action
+            android:id="@+id/action_topicsFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_topicsFragment_to_loginUnsplashFragment"
+            app:destination="@id/loginUnsplashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.unsplashapp.ui.favoritescreen.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_cardFragment"
+            app:destination="@id/cardFragment">
+            <argument
+                android:name="photo"
+                app:argType="com.example.unsplashapp.data.models.Photo"/>
+        </action>
+    </fragment>
+</navigation>

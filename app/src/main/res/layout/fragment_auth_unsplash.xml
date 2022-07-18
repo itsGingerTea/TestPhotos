@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:layout_gravity="top|center"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="55dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|center"
+        android:hint="@string/login_hint"
+        android:padding="8dp"
+        android:background="@drawable/et_unsplash"
+        android:layout_margin="5dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|center"
+        android:hint="@string/password_hint"
+        android:padding="8dp"
+        android:background="@drawable/et_unsplash"
+        android:layout_margin="5dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="top|center"
+        android:background="@drawable/login_unsplash"
+        android:text="@string/login"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

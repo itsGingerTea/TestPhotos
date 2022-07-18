@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Test Photos</string>
+    <string name="found_text">Найдено %1$d фотографий</string>
+    <string name="likes">Понравилось %1$d</string>
+    <string name="author_insta_username">Инстаграм: %1$s</string>
+    <string name="author_username">Unsplash: %1$s</string>
+    <string name="card_desc">Название</string>
+    <string name="download">Загрузить</string>
+    <string name="category">Категория: %1$s</string>
+    <string name="snackbar_add_text">Изображение добавлено в избранное</string>
+    <string name="snackbar_delete_text">Изображение удалено из избранного</string>
+    <string name="login">Log In</string>
+    <string name="continue_as_guest">Continue as guest</string>
+    <string name="progress_text">Пожалуйста подождите, фотографии грузятся</string>
+    <string name="title">Unsplash</string>
+    <string name="login_hint">Введите логин</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="error_title">Ошибка</string>
+    <string name="error_try_again">Попробовать еще раз</string>
+    <string name="likes_example">1998</string>
+    <string name="download_info">Successfully downloaded.
+        Check the "TestPhotos" or "Downloads" folder on your device</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="title_file_download_exception">File not downloaded. Check your device memory or network connection</string>
+    <string name="title_favorite">Избранное</string>
+    <string name="fav_error_loading">Failed to update. Reconnect to the Internet and try again</string>
+    <string name="title_logout">Выход из аккаунта</string>
+</resources>

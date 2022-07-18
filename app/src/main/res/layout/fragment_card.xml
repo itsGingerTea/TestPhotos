@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/CardFragmentTheme"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_card"
+        android:layout_width="wrap_content"
+        android:layout_height="700dp"
+        android:layout_marginBottom="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/cont_other_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_back"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/card_fav"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:button="@drawable/fav_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_back"
+        android:layout_marginEnd="15dp"/>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/cont_other_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/card_author_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/author_username"
+            style="@style/Card"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/card_author_insta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/author_insta_username"
+            style="@style/Card"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginBottom="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/card_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/likes"
+            style="@style/Card"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:textColor="#000"
+            android:textSize="20sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_download"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/download"
+            style="@style/Card"
+            android:textColor="#FFF"
+            android:background="#E32526"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
